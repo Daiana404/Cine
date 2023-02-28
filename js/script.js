@@ -20,18 +20,19 @@ btnMenu.addEventListener('click', () => {
 btnCerrar.addEventListener('click', () => {
     navegador.style.transform = 'translateY(-100%)';
     mostrar(btnMenu);
-    ocultar(btnCerrar);
 })
 let mediaQ = (x) => {
     if (x.matches) {
         navegador.classList.add('show');
         mostrar(btnMenu);
+        mostrar(btnCerrar);
     } else {
         navegador.style.transform = 'translateY(0%)';
         navegador.classList.remove('show');
         ocultar(btnMenu);
+        ocultar(btnCerrar);
     }
-  }
+}
 const x = window.matchMedia("(max-width: 750px)");
 mediaQ(x);
 x.addListener(mediaQ);

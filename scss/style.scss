@@ -35,14 +35,17 @@ body{
     #btn-menu{
         position: absolute;
         right: $pad-20;
-        top: $pad-20;
+        top: 50%;
+        transform: translateY(-50%);
         opacity: 0;
         visibility: hidden;
     }
     #navegador{
         position: relative;
         #btn-cerrar{
-            @extend #btn-menu;
+            position: absolute;
+            right: $pad-20;
+            top: $pad-20;
         }
         .nav-lista{
             height: 100%;
@@ -54,7 +57,7 @@ body{
                 border-radius: 20px;
                 a{
                     letter-spacing: .5px;  
-                    font-size: calc(10px + .5vw);           transition: $trans-500;
+                    font-size: calc(12px + .5vw);           transition: $trans-500;
                 }
             }
             .li-item.select{
@@ -90,11 +93,8 @@ body{
 #inicio{
     width: 100vw;
     height: 100vh;
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    min-height: 500px;
+    position: relative;
     .contenedor-peliculas{
         width: 100%;
         height: 100%;
@@ -111,11 +111,11 @@ body{
             img{
                 z-index: -2;
                 position: absolute;
-                top: 0; left: 0; width: 100vw; height: 100vh;
+                top: 0; left: 0; width: 100vw; height: 100%;
                 object-fit: cover;
                 object-position: center;
                 filter: brightness(0.6);
-                transition: $trans-500;
+                transition: $trans-800;
             }
             .mas{
                 position: absolute;
@@ -142,6 +142,7 @@ body{
                     transition: $trans-500 ease-in-out;
                 }
                 .clasificacion{
+                    transition: $trans-500 ease-in-out;
                     text-transform: uppercase;
                     font-size: 10px;
                     letter-spacing: 1px;
@@ -178,6 +179,8 @@ body{
                     color: white;
                     -webkit-text-stroke: 0;
                     font-size: calc(45px + .5vw);
+                    line-height: 38px;
+                    margin-bottom: 20px;
                 }
                 .clasificacion{
                     font-weight: 500;
@@ -188,5 +191,8 @@ body{
             }
         }
     }
+}
+#horarios{
+
 }
 @import 'components/mediaQ';
