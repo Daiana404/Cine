@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cine Recite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 
+        meta description
+        meta keywords
+     -->
+</head>
+<body>
+    <header id="encabezado">
+        <h1>Cine Recite</h1>
+
+        <ion-icon id="btn-menu" name="menu-outline"></ion-icon>
+        <nav id="navegador">
+            <ion-icon id="btn-cerrar" name="close-outline"></ion-icon>
+            <ul class="nav-lista">
+                <li class="li-item select"><a href="#">Inicio</a></li>
+                <li class="li-item"><a href="#">Horarios</a></li>
+                <li class="li-item"><a href="#">Estrenos</a></li>
+                <li class="li-item"><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio">
+        <div class="contenedor-peliculas">
+            <div class="box-pelicula selected">
+                <img src="http://www.bolivar.gob.ar/imagenes/20230109130404-el-gato-con-botas.jpg" alt="pelicula-1">
+                <div class="detalle">
+                    <p class="clasificacion">aventura / comedia</p>
+                    <h1> el gato con botas </h1>
+                    <span class="duracion">1.40 <span>hs</span></span>
+                    <p class="descripcion">
+                        el último deseo
+                    </p>
+                </div>
+                <div class="mas">
+                    <p>Ver más</p>
+                    <ion-icon name="add-outline"></ion-icon>
+                </div>
+            </div>
+            <div class="box-pelicula">
+                <img src="https://i.blogs.es/35e716/matrix-resurrections/1366_2000.jpeg" alt="pelicula-2">
+                <div class="detalle">
+                    <p class="clasificacion">ciencia ficción / acción</p>
+                    <h1> Matrix </h1>
+                    <p class="duracion">2.28 <span>hs</span></p>
+                    <p class="descripcion">
+                        resurrecciones
+                    </p>
+                </div>
+            </div>
+            <div class="box-pelicula">
+                <img src="https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/11/avatar-2.jpg?fit=1921%2C1123&ssl=1" alt="pelicula-3">
+                <div class="detalle">
+                    <p class="clasificacion">Ciencia ficción /acción </p>
+                    <h1> Avatar 2 </h1>
+                    <p class="duracion">3.12 <span>hs</span></p>
+                    <p class="descripcion">
+                        el camino del agua
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="peliculas">
+
+    </section>
+    <section id="estrenos">
+
+    </section>
+    <section id="otro">
+
+    </section>
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

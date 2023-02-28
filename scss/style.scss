@@ -1,0 +1,192 @@
+@import 'components/font';
+@import 'components/vars';
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: $poppins;
+    font-weight: 200;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    background-color: rgb(68, 68, 68);
+}
+#encabezado{
+    z-index: 5;
+    width: 100vw;
+    padding: 10px;
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    ion-icon{
+        width: 28px;
+        height: 28px;
+        cursor: pointer;
+    }
+    h1{
+        font-weight: 700;
+        padding: 0 $pad-20;
+        font-size: calc(20px + .5vw);
+    }
+    #btn-menu{
+        position: absolute;
+        right: $pad-20;
+        top: $pad-20;
+        opacity: 0;
+        visibility: hidden;
+    }
+    #navegador{
+        position: relative;
+        #btn-cerrar{
+            @extend #btn-menu;
+        }
+        .nav-lista{
+            height: 100%;
+            display: flex;
+            .li-item{
+                padding: 5px 10px;
+                transition: $trans-500;
+                margin: 0 $pad-20/2;
+                border-radius: 20px;
+                a{
+                    letter-spacing: .5px;  
+                    font-size: calc(10px + .5vw);           transition: $trans-500;
+                }
+            }
+            .li-item.select{
+                background-color: rgba(255, 255, 255, 0.829);
+                box-shadow: 1px 2px 4px rgba(59, 59, 59, 0.2);
+                a{
+                    color: $gris;
+                }
+            }
+        }
+    }
+    #navegador.show{
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            height: 100vh;
+            width: 100vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-100%);
+            transition: $trans-800 ease-in-out;
+            .nav-lista{
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                li{
+                    height: fit-content;
+                    margin: 30px 0;
+                }
+            }
+        }
+}
+#inicio{
+    width: 100vw;
+    height: 100vh;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .contenedor-peliculas{
+        width: 100%;
+        height: 100%;
+        padding: 0 $pad-20;
+        padding-bottom: $pad-20;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: flex-star;
+        .box-pelicula{
+            margin-top: $pad-20;
+            border-bottom: solid .5px white;
+            cursor: pointer;
+            img{
+                z-index: -2;
+                position: absolute;
+                top: 0; left: 0; width: 100vw; height: 100vh;
+                object-fit: cover;
+                object-position: center;
+                filter: brightness(0.6);
+                transition: $trans-500;
+            }
+            .mas{
+                position: absolute;
+                top: 30%; right: $pad-20;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-size: 12px;
+                ion-icon{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .detalle{
+                position: relative;
+                h1{
+                    font-size: calc(30px + .5vw);
+                    text-transform: capitalize;
+                    font-family: $bakbak;
+                    @include textoBorde();
+                    transition: $trans-500 ease-in-out;
+                }
+                .clasificacion{
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    
+                }
+                .descripcion{
+                    transition: $trans-500;
+                    font-size: calc(8px + .5vw);
+                    text-transform: capitalize;
+                    position: relative;
+                    bottom: 10px;
+                    left: 5px;
+                }
+                .duracion{
+                    display: inline;
+                    position: absolute;
+                    top: 50%; transform: translateY(-50%);
+                    right: 0;
+                    font-size: calc(11px + .5vw);
+                    span{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        .box-pelicula.selected{
+            opacity: 1;
+            img{
+                opacity: 1;
+                z-index: -1;
+            }
+            .detalle{
+                h1{
+                    color: white;
+                    -webkit-text-stroke: 0;
+                    font-size: calc(45px + .5vw);
+                }
+                .clasificacion{
+                    font-weight: 500;
+                }
+                .descripcion{
+                    font-size: calc(10px + .8vw);
+                }
+            }
+        }
+    }
+}
+@import 'components/mediaQ';

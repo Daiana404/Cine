@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 200;
+  box-sizing: border-box;
+  color: white; }
+
+body {
+  background-color: #444444; }
+
+#encabezado {
+  z-index: 5;
+  width: 100vw;
+  padding: 10px;
+  position: fixed;
+  display: flex;
+  justify-content: start;
+  align-items: center; }
+  #encabezado ion-icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer; }
+  #encabezado h1 {
+    font-weight: 700;
+    padding: 0 20px;
+    font-size: calc(20px + .5vw); }
+  #encabezado #btn-menu, #encabezado #navegador #btn-cerrar {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: 0;
+    visibility: hidden; }
+  #encabezado #navegador {
+    position: relative; }
+    #encabezado #navegador .nav-lista {
+      height: 100%;
+      display: flex; }
+      #encabezado #navegador .nav-lista .li-item {
+        padding: 5px 10px;
+        transition: 0.5s;
+        margin: 0 10px;
+        border-radius: 20px; }
+        #encabezado #navegador .nav-lista .li-item a {
+          letter-spacing: .5px;
+          font-size: calc(10px + .5vw);
+          transition: 0.5s; }
+      #encabezado #navegador .nav-lista .li-item.select {
+        background-color: rgba(255, 255, 255, 0.829);
+        box-shadow: 1px 2px 4px rgba(59, 59, 59, 0.2); }
+        #encabezado #navegador .nav-lista .li-item.select a {
+          color: #222222; }
+  #encabezado #navegador.show {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    transition: 0.8s ease-in-out; }
+    #encabezado #navegador.show .nav-lista {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #encabezado #navegador.show .nav-lista li {
+        height: fit-content;
+        margin: 30px 0; }
+
+#inicio {
+  width: 100vw;
+  height: 100vh; }
+  #inicio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+  #inicio .contenedor-peliculas {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-star; }
+    #inicio .contenedor-peliculas .box-pelicula {
+      margin-top: 20px;
+      border-bottom: solid .5px white;
+      cursor: pointer; }
+      #inicio .contenedor-peliculas .box-pelicula img {
+        z-index: -2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
+        filter: brightness(0.6);
+        transition: 0.5s; }
+      #inicio .contenedor-peliculas .box-pelicula .mas {
+        position: absolute;
+        top: 30%;
+        right: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 12px; }
+        #inicio .contenedor-peliculas .box-pelicula .mas ion-icon {
+          width: 20px;
+          height: 20px; }
+      #inicio .contenedor-peliculas .box-pelicula .detalle {
+        position: relative; }
+        #inicio .contenedor-peliculas .box-pelicula .detalle h1 {
+          font-size: calc(30px + .5vw);
+          text-transform: capitalize;
+          font-family: "Bakbak One";
+          -webkit-text-stroke: 1px white;
+          color: transparent;
+          transition: 0.5s ease-in-out; }
+        #inicio .contenedor-peliculas .box-pelicula .detalle .clasificacion {
+          text-transform: uppercase;
+          font-size: 10px;
+          letter-spacing: 1px; }
+        #inicio .contenedor-peliculas .box-pelicula .detalle .descripcion {
+          transition: 0.5s;
+          font-size: calc(8px + .5vw);
+          text-transform: capitalize;
+          position: relative;
+          bottom: 10px;
+          left: 5px; }
+        #inicio .contenedor-peliculas .box-pelicula .detalle .duracion {
+          display: inline;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          font-size: calc(11px + .5vw); }
+          #inicio .contenedor-peliculas .box-pelicula .detalle .duracion span {
+            font-size: 10px; }
+    #inicio .contenedor-peliculas .box-pelicula.selected {
+      opacity: 1; }
+      #inicio .contenedor-peliculas .box-pelicula.selected img {
+        opacity: 1;
+        z-index: -1; }
+      #inicio .contenedor-peliculas .box-pelicula.selected .detalle h1 {
+        color: white;
+        -webkit-text-stroke: 0;
+        font-size: calc(45px + .5vw); }
+      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .clasificacion {
+        font-weight: 500; }
+      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .descripcion {
+        font-size: calc(10px + .8vw); }
