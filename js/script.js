@@ -46,14 +46,28 @@ liNav.forEach(li => {
 const boxPeliculas = document.querySelectorAll('.box-pelicula');
 const detalles = document.querySelectorAll('.box');
 
+let removerSelected = () => {
+    boxPeliculas.forEach(item => {
+        item.classList.remove('selected');
+        item.firstElementChild.style.opacity = 0;
+    });
+}
 boxPeliculas.forEach(box => {
     box.addEventListener('click', (e) => {
-        boxPeliculas.forEach(item => {
-            item.classList.remove('selected');
-            item.firstElementChild.style.opacity = 0;
-            console.log(item.firstElementChild)
-        });
+        removerSelected();
         e.currentTarget.classList.add('selected');
         e.currentTarget.firstElementChild.style.opacity = 1;
     })
 })
+
+//Temporizador para cambiar de película en cartelera
+
+let i = 0;
+setInterval(() => {
+    if(i < boxPeliculas.length){ i++ } else { i = 1 }
+    if(i === boxPeliculas.length){ i = 0 }
+    removerSelected();
+    boxPeliculas[i].firstElementChild.style.opacity = 1;
+    boxPeliculas[i].classList.add('selected');
+}, 10000);
+

@@ -93,7 +93,7 @@ body {
     align-items: flex-star; }
     #inicio .contenedor-peliculas .box-pelicula {
       margin-top: 20px;
-      border-bottom: solid .5px white;
+      border-bottom: solid 0.5px rgba(221, 221, 221, 0.747);
       cursor: pointer; }
       #inicio .contenedor-peliculas .box-pelicula img {
         z-index: -2;
@@ -109,32 +109,35 @@ body {
       #inicio .contenedor-peliculas .box-pelicula .mas {
         position: absolute;
         top: 30%;
-        right: 20px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        text-transform: uppercase;
-        font-size: 12px; }
-        #inicio .contenedor-peliculas .box-pelicula .mas ion-icon {
-          width: 20px;
-          height: 20px; }
+        right: 20px; }
+        #inicio .contenedor-peliculas .box-pelicula .mas a {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-transform: uppercase;
+          font-size: 12px; }
+          #inicio .contenedor-peliculas .box-pelicula .mas a ion-icon {
+            width: 20px;
+            height: 20px; }
       #inicio .contenedor-peliculas .box-pelicula .detalle {
         position: relative; }
         #inicio .contenedor-peliculas .box-pelicula .detalle h1 {
           font-size: calc(30px + .5vw);
           text-transform: capitalize;
           font-family: "Bakbak One";
-          -webkit-text-stroke: 1px white;
+          -webkit-text-stroke: 0.5px rgba(221, 221, 221, 0.747);
           color: transparent;
           transition: 0.5s ease-in-out; }
         #inicio .contenedor-peliculas .box-pelicula .detalle .clasificacion {
+          font-weight: 500;
           transition: 0.5s ease-in-out;
           text-transform: uppercase;
           font-size: 10px;
-          letter-spacing: 1px; }
+          letter-spacing: 1px;
+          color: rgba(221, 221, 221, 0.747); }
         #inicio .contenedor-peliculas .box-pelicula .detalle .descripcion {
+          color: rgba(221, 221, 221, 0.747);
           transition: 0.5s;
           font-size: calc(8px + .5vw);
           text-transform: capitalize;
@@ -142,6 +145,7 @@ body {
           bottom: 10px;
           left: 5px; }
         #inicio .contenedor-peliculas .box-pelicula .detalle .duracion {
+          color: rgba(221, 221, 221, 0.747);
           display: inline;
           position: absolute;
           top: 50%;
@@ -149,6 +153,7 @@ body {
           right: 0;
           font-size: calc(11px + .5vw); }
           #inicio .contenedor-peliculas .box-pelicula .detalle .duracion span {
+            color: rgba(221, 221, 221, 0.747);
             font-size: 10px; }
     #inicio .contenedor-peliculas .box-pelicula.selected {
       opacity: 1; }
@@ -159,9 +164,14 @@ body {
         color: white;
         -webkit-text-stroke: 0;
         font-size: calc(45px + .5vw);
-        line-height: 38px;
-        margin-bottom: 20px; }
+        /*line-height: 38px;
+                    margin-bottom: 20px; */ }
       #inicio .contenedor-peliculas .box-pelicula.selected .detalle .clasificacion {
-        font-weight: 500; }
+        color: white; }
       #inicio .contenedor-peliculas .box-pelicula.selected .detalle .descripcion {
+        color: white;
         font-size: calc(10px + .8vw); }
+      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .duracion {
+        color: white; }
+        #inicio .contenedor-peliculas .box-pelicula.selected .detalle .duracion span {
+          color: white; }

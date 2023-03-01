@@ -106,7 +106,7 @@ body{
         align-items: flex-star;
         .box-pelicula{
             margin-top: $pad-20;
-            border-bottom: solid .5px white;
+            border-bottom: solid .5px $blanco-traslucido;
             cursor: pointer;
             img{
                 z-index: -2;
@@ -120,16 +120,17 @@ body{
             .mas{
                 position: absolute;
                 top: 30%; right: $pad-20;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                text-transform: uppercase;
-                font-size: 12px;
-                ion-icon{
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    ion-icon{
                     width: 20px;
                     height: 20px;
+                }
                 }
             }
             .detalle{
@@ -138,17 +139,19 @@ body{
                     font-size: calc(30px + .5vw);
                     text-transform: capitalize;
                     font-family: $bakbak;
-                    @include textoBorde();
+                    @include textoBorde($blanco-traslucido);
                     transition: $trans-500 ease-in-out;
                 }
                 .clasificacion{
+                    font-weight: 500;
                     transition: $trans-500 ease-in-out;
                     text-transform: uppercase;
                     font-size: 10px;
                     letter-spacing: 1px;
-                    
+                    color: $blanco-traslucido;
                 }
                 .descripcion{
+                    color: $blanco-traslucido;
                     transition: $trans-500;
                     font-size: calc(8px + .5vw);
                     text-transform: capitalize;
@@ -157,12 +160,14 @@ body{
                     left: 5px;
                 }
                 .duracion{
+                    color: $blanco-traslucido;
                     display: inline;
                     position: absolute;
                     top: 50%; transform: translateY(-50%);
                     right: 0;
                     font-size: calc(11px + .5vw);
                     span{
+                        color: $blanco-traslucido;
                         font-size: 10px;
                     }
                 }
@@ -179,20 +184,24 @@ body{
                     color: white;
                     -webkit-text-stroke: 0;
                     font-size: calc(45px + .5vw);
-                    line-height: 38px;
-                    margin-bottom: 20px;
+                    /*line-height: 38px;
+                    margin-bottom: 20px; */
                 }
                 .clasificacion{
-                    font-weight: 500;
+                    color: white;
                 }
                 .descripcion{
+                    color: white;
                     font-size: calc(10px + .8vw);
+                }
+                .duracion{
+                    color: white;
+                    span{
+                        color: white;
+                    }
                 }
             }
         }
     }
-}
-#horarios{
-
 }
 @import 'components/mediaQ';
