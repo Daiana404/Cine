@@ -1,0 +1,91 @@
+.cuerpo-exposicion-cartelera{
+    width: 100vw;
+    height: 100vh;
+    img{
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(.9);
+    }
+    .contenedor-cartelera-pelicula{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-left: 16vw;
+        height: 100%;
+        padding-top: 10vw;
+        .contenedor-informacion{
+            max-width: 450px;
+            .titulo-pelicula{
+                font-size: calc(40px + 1vw);
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+            .subtitulo-pelicula{
+                margin-top: -15px;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+            .descripcion-pelicula{
+                padding-top: 20px;
+                font-size: 15px;
+            }
+        }
+        .reparto{
+            .lista-contenido{
+                font-size: 20px;
+                font-weight: 300;
+                text-transform: capitalize;
+            }
+            .lista-encabezado{
+                @extend .lista-contenido;
+                letter-spacing: 2px;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            
+        }
+        .lateral{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 400px;
+            border-left: solid 1px $gris-traslucido;
+            padding: 100px 0;
+            padding-left: 50px;
+            backdrop-filter: blur(2px);
+            .informacion-general{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: flex-start;
+                li{
+                    font-size: calc(18px);
+                    letter-spacing: 2px;
+                    ul .lista-encabezado{
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        margin-top: 30px;
+                    }
+                    ul .lista-contenido{
+                        margin-top: 8px;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .trailer{
+                position: absolute;
+                bottom: 100px;
+                right: 0;
+                width: 100%;
+                height: 250px;
+                background-color: rgb(0, 0, 0);
+            }
+        }
+    }
+}

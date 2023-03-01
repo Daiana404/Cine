@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
 * {
   padding: 0;
@@ -49,16 +49,16 @@ body {
         padding: 5px 10px;
         transition: 0.5s;
         margin: 0 10px;
-        border-radius: 20px; }
+        border-radius: 8px; }
         #encabezado #navegador .nav-lista .li-item a {
           letter-spacing: .5px;
-          font-size: calc(12px + .5vw);
+          font-size: 16px;
           transition: 0.5s; }
       #encabezado #navegador .nav-lista .li-item.select {
-        background-color: rgba(255, 255, 255, 0.829);
+        background-color: rgba(255, 255, 255, 0.2);
         box-shadow: 1px 2px 4px rgba(59, 59, 59, 0.2); }
         #encabezado #navegador .nav-lista .li-item.select a {
-          color: #222222; }
+          color: white; }
   #encabezado #navegador.show {
     background-color: transparent;
     backdrop-filter: blur(10px);
@@ -92,8 +92,8 @@ body {
     justify-content: end;
     align-items: flex-star; }
     #inicio .contenedor-peliculas .box-pelicula {
+      margin: 0 40px;
       margin-top: 20px;
-      border-bottom: solid 0.5px rgba(221, 221, 221, 0.747);
       cursor: pointer; }
       #inicio .contenedor-peliculas .box-pelicula img {
         z-index: -2;
@@ -106,38 +106,25 @@ body {
         object-position: center;
         filter: brightness(0.6);
         transition: 0.8s; }
-      #inicio .contenedor-peliculas .box-pelicula .mas {
-        position: absolute;
-        top: 30%;
-        right: 20px; }
-        #inicio .contenedor-peliculas .box-pelicula .mas a {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          text-transform: uppercase;
-          font-size: 12px; }
-          #inicio .contenedor-peliculas .box-pelicula .mas a ion-icon {
-            width: 20px;
-            height: 20px; }
       #inicio .contenedor-peliculas .box-pelicula .detalle {
+        border-bottom: solid 0.5px rgba(255, 255, 255, 0.2);
         position: relative; }
         #inicio .contenedor-peliculas .box-pelicula .detalle h1 {
           font-size: calc(30px + .5vw);
           text-transform: capitalize;
           font-family: "Bakbak One";
-          -webkit-text-stroke: 0.5px rgba(221, 221, 221, 0.747);
+          -webkit-text-stroke: 0.5px rgba(221, 221, 221, 0.9);
           color: transparent;
           transition: 0.5s ease-in-out; }
-        #inicio .contenedor-peliculas .box-pelicula .detalle .clasificacion {
+        #inicio .contenedor-peliculas .box-pelicula .detalle .genero {
           font-weight: 500;
           transition: 0.5s ease-in-out;
           text-transform: uppercase;
           font-size: 10px;
           letter-spacing: 1px;
-          color: rgba(221, 221, 221, 0.747); }
+          color: rgba(221, 221, 221, 0.9); }
         #inicio .contenedor-peliculas .box-pelicula .detalle .descripcion {
-          color: rgba(221, 221, 221, 0.747);
+          color: rgba(221, 221, 221, 0.9);
           transition: 0.5s;
           font-size: calc(8px + .5vw);
           text-transform: capitalize;
@@ -145,7 +132,7 @@ body {
           bottom: 10px;
           left: 5px; }
         #inicio .contenedor-peliculas .box-pelicula .detalle .duracion {
-          color: rgba(221, 221, 221, 0.747);
+          color: rgba(221, 221, 221, 0.9);
           display: inline;
           position: absolute;
           top: 50%;
@@ -153,10 +140,12 @@ body {
           right: 0;
           font-size: calc(11px + .5vw); }
           #inicio .contenedor-peliculas .box-pelicula .detalle .duracion span {
-            color: rgba(221, 221, 221, 0.747);
+            color: rgba(221, 221, 221, 0.9);
             font-size: 10px; }
     #inicio .contenedor-peliculas .box-pelicula.selected {
-      opacity: 1; }
+      opacity: 1;
+      /* 
+            border-bottom: solid .5px white; */ }
       #inicio .contenedor-peliculas .box-pelicula.selected img {
         opacity: 1;
         z-index: -1; }
@@ -166,7 +155,7 @@ body {
         font-size: calc(45px + .5vw);
         /*line-height: 38px;
                     margin-bottom: 20px; */ }
-      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .clasificacion {
+      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .genero {
         color: white; }
       #inicio .contenedor-peliculas .box-pelicula.selected .detalle .descripcion {
         color: white;
@@ -175,3 +164,113 @@ body {
         color: white; }
         #inicio .contenedor-peliculas .box-pelicula.selected .detalle .duracion span {
           color: white; }
+  #inicio .mas {
+    position: absolute;
+    top: 30%;
+    right: 20px; }
+    #inicio .mas a {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      font-size: 12px; }
+      #inicio .mas a ion-icon {
+        width: 20px;
+        height: 20px; }
+
+.cuerpo-exposicion-cartelera {
+  width: 100vw;
+  height: 100vh; }
+  .cuerpo-exposicion-cartelera img {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.9); }
+  .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-left: 16vw;
+    height: 100%;
+    padding-top: 10vw; }
+    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion {
+      max-width: 450px; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .titulo-pelicula {
+        font-size: calc(40px + 1vw);
+        font-weight: 700;
+        text-transform: capitalize; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .subtitulo-pelicula {
+        margin-top: -15px;
+        font-weight: 300;
+        text-transform: capitalize; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .descripcion-pelicula {
+        padding-top: 20px;
+        font-size: 15px; }
+    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-contenido, .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-encabezado {
+      font-size: 20px;
+      font-weight: 300;
+      text-transform: capitalize; }
+    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-encabezado {
+      letter-spacing: 2px;
+      font-weight: 500;
+      text-transform: uppercase; }
+    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 400px;
+      border-left: solid 1px rgba(255, 255, 255, 0.2);
+      padding: 100px 0;
+      padding-left: 50px;
+      backdrop-filter: blur(2px); }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start; }
+        .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li {
+          font-size: calc(18px);
+          letter-spacing: 2px; }
+          .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .lista-encabezado {
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-top: 30px; }
+          .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .lista-contenido, .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .reparto .lista-encabezado, .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lateral .informacion-general li ul .lista-encabezado {
+            margin-top: 8px;
+            text-transform: capitalize; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .trailer {
+        position: absolute;
+        bottom: 100px;
+        right: 0;
+        width: 100%;
+        height: 250px;
+        background-color: black; }
+
+@media only screen and (max-width: 750px) {
+  #encabezado #navegador ul {
+    width: 95vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #encabezado #navegador ul li {
+      height: 60px !important;
+      width: 100%; }
+      #encabezado #navegador ul li a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px !important; } }
+
+@media only screen and (max-width: 550px) {
+  #inicio .contenedor-peliculas .box-pelicula {
+    margin-right: 0;
+    margin-left: 0; } }

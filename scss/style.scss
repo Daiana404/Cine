@@ -54,17 +54,18 @@ body{
                 padding: 5px 10px;
                 transition: $trans-500;
                 margin: 0 $pad-20/2;
-                border-radius: 20px;
+                border-radius: 8px;
                 a{
                     letter-spacing: .5px;  
-                    font-size: calc(12px + .5vw);           transition: $trans-500;
+                    font-size: 16px;
+                    transition: $trans-500;
                 }
             }
             .li-item.select{
-                background-color: rgba(255, 255, 255, 0.829);
+                background-color: $gris-traslucido;
                 box-shadow: 1px 2px 4px rgba(59, 59, 59, 0.2);
                 a{
-                    color: $gris;
+                    color: white;
                 }
             }
         }
@@ -105,8 +106,8 @@ body{
         justify-content: end;
         align-items: flex-star;
         .box-pelicula{
+            margin: 0 40px;
             margin-top: $pad-20;
-            border-bottom: solid .5px $blanco-traslucido;
             cursor: pointer;
             img{
                 z-index: -2;
@@ -117,23 +118,9 @@ body{
                 filter: brightness(0.6);
                 transition: $trans-800;
             }
-            .mas{
-                position: absolute;
-                top: 30%; right: $pad-20;
-                a{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-transform: uppercase;
-                    font-size: 12px;
-                    ion-icon{
-                    width: 20px;
-                    height: 20px;
-                }
-                }
-            }
+            
             .detalle{
+                border-bottom: solid .5px $gris-traslucido;
                 position: relative;
                 h1{
                     font-size: calc(30px + .5vw);
@@ -142,7 +129,7 @@ body{
                     @include textoBorde($blanco-traslucido);
                     transition: $trans-500 ease-in-out;
                 }
-                .clasificacion{
+                .genero{
                     font-weight: 500;
                     transition: $trans-500 ease-in-out;
                     text-transform: uppercase;
@@ -174,7 +161,8 @@ body{
             }
         }
         .box-pelicula.selected{
-            opacity: 1;
+            opacity: 1;/* 
+            border-bottom: solid .5px white; */
             img{
                 opacity: 1;
                 z-index: -1;
@@ -187,7 +175,7 @@ body{
                     /*line-height: 38px;
                     margin-bottom: 20px; */
                 }
-                .clasificacion{
+                .genero{
                     color: white;
                 }
                 .descripcion{
@@ -203,5 +191,22 @@ body{
             }
         }
     }
+    .mas{
+        position: absolute;
+        top: 30%; right: $pad-20;
+        a{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 12px;
+            ion-icon{
+            width: 20px;
+            height: 20px;
+        }
+        }
+    }
 }
+@import 'styles/en-cartelera';
 @import 'components/mediaQ';
