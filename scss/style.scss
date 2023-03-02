@@ -137,9 +137,9 @@ body{
                     letter-spacing: 1px;
                     color: $blanco-traslucido;
                 }
-                .descripcion{
+                .intertitulo{
                     color: $blanco-traslucido;
-                    transition: $trans-500;
+                    transition: $trans-500 ease-in-out;
                     font-size: calc(8px + .5vw);
                     text-transform: capitalize;
                     position: relative;
@@ -178,7 +178,7 @@ body{
                 .genero{
                     color: white;
                 }
-                .descripcion{
+                .intertitulo{
                     color: white;
                     font-size: calc(10px + .8vw);
                 }

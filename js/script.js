@@ -1,27 +1,45 @@
 const peliculasCartelera = [
     {
-        nombre: 'El gato con botas',
+        titulo: 'El gato con botas',
         id: 'el-gato-con-botas',
-        descripcion: 'el último deseo',
-        img: 'http://www.bolivar.gob.ar/imagenes/20230109130404-el-gato-con-botas.jpg',
-        fondo: 'https://s1.dmcdn.net/v/U0I7S1YgXzjrcdkRm/x1080',
+        intertitulo: 'el último deseo',
+        img: './scss/img/el-gato-con-botas-2.jpg',
+        fondo: '../scss/img/el-gato-con-botas-2-fondo.jpg',
+        descripcion: 'El Gato con Botas descubre que, debido a su pasión por la aventura, ha gastado ya 8 de sus 9 vidas. Por tanto, emprende un peligroso viaje en busca del legendario Último Deseo para solicitar que le restauren las vidas que ya perdió.',
         especificaciones: {
             genero: 'aventura / comedia',
             duracion: '2.28',
             clasificacion: 'atp'
-        }
+        },
+        dato: {
+            premiere: '5 de enero de 2023',
+            director: 'joel Crawford',
+            musica: 'Heitor Pereira',
+            reparto: ['Antonio Banderas', 'Salma Hayek', 'Florence Push'],
+            repartoGoogle: 'https://www.google.com/search?q=el+gato+con+botas+2+reparto&rlz=1C1CHZN_esAR993AR993&sxsrf=AJOqlzVr0yp0-mTmPxMqoTzeP7s82614Gw%3A1677788177064&ei=EQQBZJLAA-3U1sQPgpibQA&oq=el+gato++2+reparto&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAxgAMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQCBAeOggIABAIEAcQHkoECEEYAFAAWOIJYMkPaABwAXgAgAGhAYgBqAiSAQMwLjiYAQCgAQHAAQE&sclient=gws-wiz-serp'
+        },
+        trailer: '<iframe src="https://www.youtube.com/embed/18v5EPO5ySs" title="El Gato Con Botas 2: El Último Deseo | Tráiler Oficial (Universal Pictures) HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
     },
     {
-       nombre: 'Avatar 2',
-       id: 'avatar-2',
-       descripcion: 'el camino del agua',
-       img: 'https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/11/avatar-2.jpg?fit=1921%2C1123&ssl=1',
-       fondo: 'https://img2.rtve.es/imagenes/james-cameron-hemos-rodado-vez-tres-secuelas-avatar/1671117282894.jpg',
-       especificaciones: {
-           genero: 'ciencia ficción / acción',
-           duracion: '3.12',
-           clasificacion: '+13'
-       }
+        titulo: 'Avatar 2',
+        id: 'avatar-2',
+        intertitulo: 'el camino del agua',
+        img: './scss/img/avatar-2.webp',
+        fondo: '../scss/img/avatar-2-fondo.jpg',
+        descripcion: 'Jake Sully y Ney\' tiri han formado una familia y hacen todo lo posible por permanecer juntos. Sin embargo, deben abandonar su hogar y explorar las regiones de Pandora cuando una antigua amenaza reaparece.',
+        especificaciones: {
+            genero: 'ciencia ficción / acción',
+            duracion: '3.12',
+            clasificacion: '+13'
+        },
+        dato: {
+            premiere: '15 de diciembre de 2022',
+            director: 'James Cameron',
+            musica: 'Simon Franglen',
+            reparto: ['Sam Worthington', 'Zoe Saldaña', 'Sigourney Weaver'],
+            repartoGoogle: 'https://www.google.com/search?q=avatar+2+reparto&rlz=1C1CHZN_esAR993AR993&oq=avatar+2+re&aqs=chrome.1.69i57j0i20i263i433i512j0i512j0i433i512j0i512l3j69i60.9767j0j7&sourceid=chrome&ie=UTF-8'
+        },
+        trailer: '<iframe src="https://www.youtube.com/embed/bDFKIs4v0B4" title="Avatar: El Camino del Agua | Tráiler Oficial | Subtitulado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
    }
 ]
 const contenedorPeliculas = document.querySelector('.contenedor-peliculas');
@@ -31,12 +49,12 @@ peliculasCartelera.forEach(pelicula => {
     div.classList.add('box-pelicula');
     div.setAttribute('id', `box-${pelicula.id}`);
     div.innerHTML = `
-        <img src="${pelicula.img}" alt="${pelicula.nombre}">
+        <img src="${pelicula.img}" alt="${pelicula.titulo}">
         <div class="detalle">
             <p class="genero">${pelicula.especificaciones.genero}</p>
-            <h1>${pelicula.nombre}</h1>
+            <h1>${pelicula.titulo}</h1>
             <p class="duracion">${pelicula.especificaciones.duracion} <span>hs</span></p>
-            <p class="descripcion"> ${pelicula.descripcion} </p>
+            <p class="intertitulo"> ${pelicula.intertitulo} </p>
         </div>
     `;
     contenedorPeliculas.appendChild(div);

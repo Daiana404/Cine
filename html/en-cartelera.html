@@ -10,51 +10,56 @@
 </head>
 <body>
     <div class="cuerpo-exposicion-cartelera">
-        <img class="fondo-pelicula" src="https://img2.rtve.es/imagenes/james-cameron-hemos-rodado-vez-tres-secuelas-avatar/1671117282894.jpg" alt="">
+        <img class="fondo-pelicula" alt="">
         <div class="contenedor-cartelera-pelicula">
             <div class="contenedor-informacion">
                 <h1 class="titulo-pelicula">Nombre</h1>
-                <h2 class="subtitulo-pelicula">Subtitulo</h2>
+                <h2 class="intertitulo-pelicula">Intertítulo</h2>
                 <p class="descripcion-pelicula">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae incidunt inventore fuga sit impedit? Fugit, dolor nobis nihil accusantium quas necessitatibus vero sapiente illo voluptas? Ad saepe quibusdam sequi hic?</p>
             </div>
             <ul class="reparto">
-                <li class="lista-encabezado">actores</li>
-                <li class="lista-contenido"><a href="#">nombre del actor</a></li>
+                <li class="it-encabezado">reparto</li>
+                <li class="lista-contenido">
+                    <ul class="actores">
+                    </ul>
+                </li>
+                <li class="it-ver-mas" id="ver-mas"><!-- Completado con JS --></li>
             </ul>
             <aside class="lateral">
                 <ul class="informacion-general">
                     <li>
                         <ul>
                             <li class="lista-encabezado">premiere</li>
-                            <li class="lista-contenido">fecha</li>
+                            <li class="lista-contenido" id="premiere">fecha</li>
                         </ul>
                     </li>
                     <li>
                         <ul>
                             <li class="lista-encabezado">director</li>
-                            <li class="lista-contenido">director</li>
+                            <li class="lista-contenido" id="director">director</li>
                         </ul>
                     </li>
                     <li>
                         <ul>
-                            <li class="lista-encabezado">música por</li>
-                            <li class="lista-contenido">autor</li>
+                            <li class="lista-encabezado">música by</li>
+                            <li class="lista-contenido" id="musica">autor</li>
                         </ul>
                     </li>
                     <li>
                         <ul>
                             <li class="lista-encabezado">género</li>
-                            <li class="lista-contenido">genero</li>
+                            <li class="lista-contenido" id="genero">genero</li>
                         </ul>
                     </li>
                 </ul>
                 <div class="trailer">
-                    
+                    <!-- Completado con JS -->
                 </div>
             </aside>
         </div>
     </div>
-    <script src="../js/mediaQ.js"></script>
     <script src="../js/exposición-pelicula.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

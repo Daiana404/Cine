@@ -123,9 +123,9 @@ body {
           font-size: 10px;
           letter-spacing: 1px;
           color: rgba(221, 221, 221, 0.9); }
-        #inicio .contenedor-peliculas .box-pelicula .detalle .descripcion {
+        #inicio .contenedor-peliculas .box-pelicula .detalle .intertitulo {
           color: rgba(221, 221, 221, 0.9);
-          transition: 0.5s;
+          transition: 0.5s ease-in-out;
           font-size: calc(8px + .5vw);
           text-transform: capitalize;
           position: relative;
@@ -157,7 +157,7 @@ body {
                     margin-bottom: 20px; */ }
       #inicio .contenedor-peliculas .box-pelicula.selected .detalle .genero {
         color: white; }
-      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .descripcion {
+      #inicio .contenedor-peliculas .box-pelicula.selected .detalle .intertitulo {
         color: white;
         font-size: calc(10px + .8vw); }
       #inicio .contenedor-peliculas .box-pelicula.selected .detalle .duracion {
@@ -188,7 +188,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.9); }
+    filter: brightness(0.8); }
   .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula {
     display: flex;
     flex-direction: column;
@@ -196,61 +196,97 @@ body {
     align-items: flex-start;
     padding-left: 16vw;
     height: 100%;
-    padding-top: 10vw; }
+    padding-top: 15vw; }
     .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion {
-      max-width: 450px; }
+      max-width: 550px; }
       .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .titulo-pelicula {
         font-size: calc(40px + 1vw);
         font-weight: 700;
         text-transform: capitalize; }
-      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .subtitulo-pelicula {
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .intertitulo-pelicula {
         margin-top: -15px;
         font-weight: 300;
         text-transform: capitalize; }
       .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .descripcion-pelicula {
+        max-width: 450px;
         padding-top: 20px;
         font-size: 15px; }
-    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-contenido, .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-encabezado {
-      font-size: 20px;
-      font-weight: 300;
-      text-transform: capitalize; }
-    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-encabezado {
-      letter-spacing: 2px;
-      font-weight: 500;
-      text-transform: uppercase; }
+    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto {
+      font-size: calc(10px + .5vw); }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-encabezado {
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-transform: uppercase; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lista-contenido {
+        margin-top: 10px;
+        font-weight: 300;
+        text-transform: capitalize; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas {
+        margin-top: 15px;
+        position: relative; }
+        .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas a {
+          color: rgba(221, 221, 221, 0.9);
+          font-size: 12px;
+          text-transform: uppercase;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          transition: .5s; }
+          .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas a ion-icon {
+            transition: .5s;
+            width: 13px;
+            height: 13px;
+            color: rgba(221, 221, 221, 0.9);
+            margin-left: 5px; }
+        .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas a:hover {
+          color: white; }
+          .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas a:hover ion-icon {
+            transform: translateX(100%);
+            color: white; }
     .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral {
       position: absolute;
       right: 0;
       top: 0;
       height: 100%;
-      width: 400px;
+      max-width: 380px;
+      width: 30vw;
       border-left: solid 1px rgba(255, 255, 255, 0.2);
       padding: 100px 0;
-      padding-left: 50px;
-      backdrop-filter: blur(2px); }
+      backdrop-filter: blur(2px);
+      display: flex;
+      flex-direction: column; }
       .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general {
+        padding-left: 50px;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: flex-start; }
         .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li {
-          font-size: calc(18px);
-          letter-spacing: 2px; }
+          font-size: calc(10px + .5vw); }
           .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .lista-encabezado {
-            font-weight: 500;
+            letter-spacing: 1px;
+            font-weight: 600;
             text-transform: uppercase;
             margin-top: 30px; }
-          .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .lista-contenido, .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .reparto .lista-encabezado, .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .lateral .informacion-general li ul .lista-encabezado {
+          .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .informacion-general li ul .lista-contenido {
             margin-top: 8px;
             text-transform: capitalize; }
       .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .trailer {
-        position: absolute;
-        bottom: 100px;
-        right: 0;
+        margin-top: 25px;
         width: 100%;
-        height: 250px;
-        background-color: black; }
+        max-height: 210px;
+        min-height: 150px;
+        height: 100%;
+        filter: brightness(0.8);
+        transition: .5s; }
+        .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .trailer iframe {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center center; }
+      .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .lateral .trailer:hover {
+        filter: brightness(1); }
 
 @media only screen and (max-width: 750px) {
   #encabezado #navegador ul {
