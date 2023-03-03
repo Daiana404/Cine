@@ -1,8 +1,33 @@
+@media (orientation: landscape) {
+    .cuerpo-exposicion-cartelera{
+        .contenedor-cartelera-pelicula{
+            max-width: none;
+            height: fit-content;
+            padding-left: 10vw;
+            padding-right: 10vw;
+            padding-bottom: 30px;
+        }
+        .lateral{
+            position: static;
+            width: 100%;
+            max-width: none;
+            height: fit-content;
+            border: 0;
+            border-top: solid 1px $gris-traslucido;
+            padding: 20px 10px;
+            .trailer{
+                max-height: none;
+                min-height: 500px;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 820px){
     .cuerpo-exposicion-cartelera{
         .contenedor-cartelera-pelicula{
-            height: 70vh;
+            max-width: none;
             padding-left: 10vw;
+            padding-right: 10vw;
         }
         .lateral{
             position: static;
@@ -22,7 +47,6 @@
     .cuerpo-exposicion-cartelera{
         .contenedor-cartelera-pelicula{
             height: 100vh;
-            max-width: none;
             width: 100vw;
             padding: 0 20px;
             padding-top: 15vh;
