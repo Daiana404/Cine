@@ -64,27 +64,6 @@ window.addEventListener('load', () => {
     boxPeliculaInicial.classList.add('selected');
 })
 ///////////////////////////////////////
-const navegador = document.getElementById('navegador');
-const btnMenu = document.querySelector('#btn-menu');
-const btnCerrar = document.querySelector('#btn-cerrar');
-const liNav = document.querySelectorAll('.li-item');
-
-////////////////////////Navegador
-btnMenu.addEventListener('click', () => {
-    mostrar(btnCerrar);
-    ocultar(btnMenu);
-    navegador.style.transform = 'translateY(0)';
-})
-btnCerrar.addEventListener('click', () => {
-    navegador.style.transform = 'translateY(-100%)';
-    mostrar(btnMenu);
-})
-liNav.forEach(li => {
-    li.addEventListener('click', (e) => {
-        liNav.forEach(l => {l.classList.remove('select')});
-        e.currentTarget.classList.add('select');
-    })
-})
 ////////////////////////Inicio
 const boxPeliculas = document.querySelectorAll('.box-pelicula');
 const detalles = document.querySelectorAll('.box');

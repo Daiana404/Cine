@@ -10,6 +10,20 @@
 </head>
 <body>
     <div class="cuerpo-exposicion-cartelera">
+        <header id="encabezado">
+            <h1 class="blur">Cine</h1>
+    
+            <ion-icon class="blur" id="btn-menu" name="menu-outline"></ion-icon>
+            <nav id="navegador">
+                <ion-icon id="btn-cerrar" name="close-outline"></ion-icon>
+                <ul class="nav-lista">
+                    <li class="li-item blur"><a href="../index.html">Inicio</a></li>
+                    <li class="li-item blur"><a href="#">Horarios</a></li>
+                    <li class="li-item blur"><a href="#">Estrenos</a></li>
+                    <li class="li-item blur"><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
         <img class="fondo-pelicula" alt="">
         <div class="contenedor-cartelera-pelicula">
             <div class="contenedor-informacion">
@@ -25,40 +39,42 @@
                 </li>
                 <li class="it-ver-mas" id="ver-mas"><!-- Completado con JS --></li>
             </ul>
-            <aside class="lateral">
-                <ul class="informacion-general">
-                    <li>
-                        <ul>
-                            <li class="lista-encabezado">premiere</li>
-                            <li class="lista-contenido" id="premiere">fecha</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li class="lista-encabezado">director</li>
-                            <li class="lista-contenido" id="director">director</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li class="lista-encabezado">música by</li>
-                            <li class="lista-contenido" id="musica">autor</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul>
-                            <li class="lista-encabezado">género</li>
-                            <li class="lista-contenido" id="genero">genero</li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="trailer">
-                    <!-- Completado con JS -->
-                </div>
-            </aside>
         </div>
+        
+        <aside class="lateral">
+            <ul class="informacion-general">
+                <li>
+                    <ul>
+                        <li class="lista-encabezado">premiere</li>
+                        <li class="lista-contenido" id="premiere">fecha</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="lista-encabezado">director</li>
+                        <li class="lista-contenido" id="director">director</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="lista-encabezado">música by</li>
+                        <li class="lista-contenido" id="musica">autor</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <li class="lista-encabezado">género</li>
+                        <li class="lista-contenido" id="genero">genero</li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="trailer">
+                <!-- Completado con JS -->
+            </div>
+        </aside>
     </div>
-    <script src="../js/exposición-pelicula.js"></script>
+    <script src="../js/exposicion-pelicula.js"></script>
+    <script src="../js/mediaQ.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

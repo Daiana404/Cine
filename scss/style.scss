@@ -1,9 +1,12 @@
 @import 'components/font';
 @import 'components/vars';
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
+    border: 0;
     list-style: none;
     text-decoration: none;
     font-family: $poppins;
@@ -22,6 +25,7 @@ body{
     display: flex;
     justify-content: start;
     align-items: center;
+    transition: .5s ease-in-out;
     ion-icon{
         width: 28px;
         height: 28px;
@@ -31,6 +35,7 @@ body{
         font-weight: 700;
         padding: 0 $pad-20;
         font-size: calc(20px + .5vw);
+        border-radius: $border-radius;
     }
     #btn-menu{
         position: absolute;
@@ -39,6 +44,8 @@ body{
         transform: translateY(-50%);
         opacity: 0;
         visibility: hidden;
+        padding: 0 5px;
+        border-radius: $border-radius;
     }
     #navegador{
         position: relative;
@@ -54,7 +61,7 @@ body{
                 padding: 5px 10px;
                 transition: $trans-500;
                 margin: 0 $pad-20/2;
-                border-radius: 8px;
+                border-radius: $border-radius;
                 a{
                     letter-spacing: .5px;  
                     font-size: 16px;
@@ -89,7 +96,10 @@ body{
                     margin: 30px 0;
                 }
             }
-        }
+    }
+    .blur{
+        transition: .5s ease-in-out;
+    }
 }
 #inicio{
     width: 100vw;
@@ -210,3 +220,4 @@ body{
 }
 @import 'styles/en-cartelera';
 @import 'components/mediaQ';
+@import 'components/mediaQ-exposicion';

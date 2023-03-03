@@ -1,0 +1,53 @@
+@media only screen and (max-width: 820px){
+    .cuerpo-exposicion-cartelera{
+        .contenedor-cartelera-pelicula{
+            height: 70vh;
+            padding-left: 10vw;
+        }
+        .lateral{
+            position: static;
+            width: 100%;
+            max-width: none;
+            height: 80vh;
+            border: 0;
+            border-top: solid 1px $gris-traslucido;
+            padding: 20px 10px;
+            .trailer{
+                max-height: none;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 400px){
+    .cuerpo-exposicion-cartelera{
+        .contenedor-cartelera-pelicula{
+            height: 100vh;
+            padding: 0 20px;
+            padding-top: 15vh;
+            .contenedor-informacion{
+                .titulo-pelicula{
+                    font-size: 28px;
+                }
+                .intertitulo-pelicula{
+                    font-size: 15px;
+                    padding-top: 10px;
+                }
+                .descripcion-pelicula{
+                    font-size: 13px;
+                }
+            }
+        }
+        .lateral{
+            position: static;
+            width: 100%;
+            max-width: none;
+            height: 80vh;
+            border: 0;
+            border-top: solid 1px $gris-traslucido;
+            padding: 20px 10px;
+            .trailer{
+                max-height: 210px;
+            }
+        }
+    }
+}
