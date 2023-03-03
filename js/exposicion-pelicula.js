@@ -10,6 +10,8 @@ const genero = document.getElementById('genero');
 const trailer =  document.querySelector('.trailer');
 const actores = document.querySelector('.actores');
 const reparto = document.querySelector('.reparto');
+const clasificacion = document.querySelector('.clasificacion');
+const duracion = document.querySelector('.duracion');
 const verMas = document.getElementById('ver-mas');
 //Autocompletado
 fondo.src = `${peliculaSeleccionada.fondo}`;
@@ -20,6 +22,8 @@ premiere.innerHTML = `${peliculaSeleccionada.dato.premiere}`;
 director.innerHTML = `${peliculaSeleccionada.dato.director}`;
 musica.innerHTML = `${peliculaSeleccionada.dato.musica}`;
 genero.innerHTML = `${peliculaSeleccionada.especificaciones.genero}`;
+duracion.innerHTML = `${peliculaSeleccionada.especificaciones.duracion}`;
+clasificacion.innerHTML = `${peliculaSeleccionada.especificaciones.clasificacion}`;
 trailer.innerHTML = `${peliculaSeleccionada.trailer}`;
 peliculaSeleccionada.dato.reparto.forEach(actor => {
     const li = document.createElement('li');

@@ -10,16 +10,21 @@
         height: 100%;
         object-fit: cover;
         filter: brightness(.8);
+        transition: .5s ease-in-out;
     }
     .contenedor-cartelera-pelicula{
+        max-width: calc(70vw);
         height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: flex-start;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 'a1 a1'
+                             'a2 a3';
+        
         padding-left: 16vw;
         padding-top: 15vw;
         .contenedor-informacion{
+            grid-area: a1;
             .titulo-pelicula{
                 font-size: calc(40px + 1vw);
                 font-weight: 700;
@@ -34,10 +39,12 @@
                 width: 100%;
                 max-width: 450px;
                 padding-top: 20px;
-                font-size: 15px;
+                font-size: calc(15px + .2vw);
             }
         }
+        
         .reparto{
+            grid-area: a2;
             font-size: calc(10px + .5vw);
             .it-encabezado{
                 letter-spacing: 1px;
@@ -76,6 +83,23 @@
                 }
             }
         }
+        .duracion-clasificacion{
+            grid-area: a3;
+            justify-self: center;
+            li{
+                ion-icon{
+                    padding-right: 5px;
+                    width: 18px;
+                    height: 18px;
+                }
+                display: flex;
+                align-items: center;
+                p{
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+            }
+        }    
     }
     .lateral{
         position: absolute;

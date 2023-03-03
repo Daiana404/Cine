@@ -22,6 +22,8 @@
     .cuerpo-exposicion-cartelera{
         .contenedor-cartelera-pelicula{
             height: 100vh;
+            max-width: none;
+            width: 100vw;
             padding: 0 20px;
             padding-top: 15vh;
             .contenedor-informacion{
