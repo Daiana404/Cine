@@ -12,22 +12,32 @@ let mostrar = (elemento) => {
     elemento.style.opacity = '1';
     elemento.style.visibility = 'visible';
 }
+
+let ocultarNav = () => {
+    navegador.style.transform = 'translateY(-100%)';
+    mostrar(btnMenu);
+}
 let mediaQ = (x) => {
     if (x.matches) {
         navegador.classList.add('show');
         mostrar(btnMenu);
-        mostrar(btnCerrar)
+        mostrar(btnCerrar);
+        liNav.forEach(li => {
+            li.addEventListener('click', ocultarNav, true);
+        })
     } else {
         navegador.style.transform = 'translateY(0%)';
         navegador.classList.remove('show');
         ocultar(btnMenu);
         ocultar(btnCerrar);
+        liNav.forEach(li => {
+            li.removeEventListener('click', ocultarNav, true);
+        })
     }
 }
 const x = window.matchMedia("(max-width: 750px)");
 mediaQ(x);
 x.addListener(mediaQ);
-
 ////////////////////////Navegador
 btnMenu.addEventListener('click', () => {
     ocultar(btnMenu);
@@ -37,15 +47,15 @@ btnCerrar.addEventListener('click', () => {
     navegador.style.transform = 'translateY(-100%)';
     mostrar(btnMenu);
 })
+let clicked = false;
 liNav.forEach(li => {
     li.addEventListener('click', (e) => {
         liNav.forEach(l => {l.classList.remove('select')});
         e.currentTarget.classList.add('select');
-        //Si algún item es clickeado
-        navegador.style.transform = 'translateY(-100%)';
-        mostrar(btnMenu);
+        clicked = true;
     })
 })
+
 
 /////////////////////////Scroll
 const blurElement = document.querySelectorAll('.blur');
