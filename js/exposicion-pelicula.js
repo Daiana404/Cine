@@ -1,5 +1,5 @@
 const peliculaSeleccionada = JSON.parse(localStorage.getItem('pelicula'));
-const fondo = document.querySelector('.fondo-pelicula');
+const fondo = document.querySelector('.cuerpo-exposicion-cartelera');
 const titulo = document.querySelector('.titulo-pelicula');
 const intertitulo = document.querySelector('.intertitulo-pelicula');
 const descripcion = document.querySelector('.descripcion-pelicula');
@@ -14,7 +14,9 @@ const clasificacion = document.querySelector('.clasificacion');
 const duracion = document.querySelector('.duracion');
 const verMas = document.getElementById('ver-mas');
 //Autocompletado
-fondo.src = `${peliculaSeleccionada.fondo}`;
+
+console.log(peliculaSeleccionada.fondo);
+fondo.style.backgroundImage = `url(${peliculaSeleccionada.fondo})`;
 titulo.innerHTML = `${peliculaSeleccionada.titulo}`;
 intertitulo.innerHTML = `${peliculaSeleccionada.intertitulo}`;
 descripcion.innerHTML = `${peliculaSeleccionada.descripcion}`;
