@@ -335,7 +335,7 @@ body {
     margin-right: 0;
     margin-left: 0; } }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-height: 360px) {
   .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula {
     max-width: none;
     height: fit-content;
