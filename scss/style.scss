@@ -35,7 +35,7 @@ body{
     h1{
         font-weight: 700;
         padding: 0 $pad-20;
-        font-size: calc(20px + .5vw);
+        font-size: calc(1.2rem + .5vw);
         border-radius: $border-radius;
     }
     #btn-menu{
@@ -65,7 +65,7 @@ body{
                 border-radius: $border-radius;
                 a{
                     letter-spacing: .5px;  
-                    font-size: 16px;
+                    font-size: 1rem;
                     transition: $trans-500;
                 }
             }
@@ -134,7 +134,7 @@ body{
                 border-bottom: solid .5px $gris-traslucido;
                 position: relative;
                 h1{
-                    font-size: calc(30px + .5vw);
+                    font-size: calc(2rem + .5vw);
                     text-transform: capitalize;
                     font-family: $bakbak;
                     @include textoBorde($blanco-traslucido);
@@ -144,14 +144,14 @@ body{
                     font-weight: 500;
                     transition: $trans-500 ease-in-out;
                     text-transform: uppercase;
-                    font-size: 10px;
+                    font-size: .8rem;
                     letter-spacing: 1px;
                     color: $blanco-traslucido;
                 }
                 .intertitulo{
                     color: $blanco-traslucido;
                     transition: $trans-500 ease-in-out;
-                    font-size: calc(8px + .5vw);
+                    font-size: calc(.5rem + .5vw);
                     text-transform: capitalize;
                     position: relative;
                     bottom: 10px;
@@ -163,10 +163,10 @@ body{
                     position: absolute;
                     top: 50%; transform: translateY(-50%);
                     right: 0;
-                    font-size: calc(11px + .5vw);
+                    font-size: calc(.9rem + .5vw);
                     span{
                         color: $blanco-traslucido;
-                        font-size: 10px;
+                        font-size: .85rem;
                     }
                 }
             }
@@ -182,7 +182,7 @@ body{
                 h1{
                     color: white;
                     -webkit-text-stroke: 0;
-                    font-size: calc(45px + .5vw);
+                    font-size: calc(2.5rem + .5vw);
                     /*line-height: 38px;
                     margin-bottom: 20px; */
                 }
@@ -191,7 +191,7 @@ body{
                 }
                 .intertitulo{
                     color: white;
-                    font-size: calc(10px + .8vw);
+                    font-size: calc(.6rem + .8vw);
                 }
                 .duracion{
                     color: white;
@@ -211,14 +211,16 @@ body{
             justify-content: center;
             align-items: center;
             text-transform: uppercase;
-            font-size: 14px;
+            p{
+                font-size: .8rem;
+            }
             ion-icon{
-            width: 23px;
-            height: 23px;
+            width: 22px;
+            height: 22px;
         }
         }
     }
 }
-@import 'styles/en-cartelera';
+@import 'styles/info-pelicula';
 @import 'components/mediaQ';
-@import 'components/mediaQ-exposicion';
+@import 'components/mediaQ-info-peli';

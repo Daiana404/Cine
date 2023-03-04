@@ -58,7 +58,7 @@ liNav.forEach(li => {
 
 
 /////////////////////////Scroll
-const blurElement = document.querySelectorAll('.blur');
+/* const blurElement = document.querySelectorAll('.blur');
 blurElement.forEach(element => {
     window.addEventListener('scroll', () => {
         if(window.scrollY > 50) {
@@ -67,4 +67,11 @@ blurElement.forEach(element => {
             element.style.backdropFilter = 'blur(0)';
         }
     })
+}) */
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 50) {
+        encabezado.style.backgroundColor = 'rgb(0,0,0)';
+    } else {
+        encabezado.style.backgroundColor = 'transparent';
+    }
 })

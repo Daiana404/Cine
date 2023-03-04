@@ -1,0 +1,137 @@
+.cuerpo-exposicion-cartelera{
+    /* min-width: 100vw;
+    min-height: 100vh; */
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100vh;
+    grid-template-areas: 'a1 a2';
+    overflow-x: hidden;
+    .fondo-pelicula{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: fixed;
+        transform-origin: center;
+        transition: 1s;
+        z-index: -1;
+        filter: brightness(.8);
+    }
+    //Extend
+    .extend-letra-encabezado{
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: .9rem;
+    } 
+    .extend-letra-contenido{
+        font-size: .85rem;
+        text-transform: capitalize;
+    }
+    //Hijos
+    .contenedor-cartelera-pelicula{
+        grid-area: a1;
+        padding: 20% 5% 5% 15%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 'a1 a1'
+                             'a2 a3';
+        .contenedor-informacion{
+            grid-area: a1;
+            .titulo-pelicula{
+                font-weight: 700;
+                text-transform: capitalize;
+                font-size: calc(2rem + 1vw);
+            }
+            .intertitulo-pelicula{
+                font-size: calc(1rem + .3vw);
+                padding-left: 10px;
+                text-transform: capitalize;
+                position: relative; top: -10px;
+                font-style: italic;
+            }
+            .descripcion-pelicula{
+                max-width: 35vw;
+            }
+        }               
+        .reparto{
+            grid-area: a2;
+            .it-encabezado{
+                @extend .extend-letra-encabezado;
+            }
+            .it-contenido ul li{
+                @extend .extend-letra-contenido;
+            }
+            .it-ver-mas{
+                margin-top: 15px;
+                position: relative;
+                a{
+                    color: $blanco-traslucido;
+                    font-size: 12px;
+                    text-transform: capitalize;
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    transition: .5s;
+                    ion-icon{
+                        transition: .5s;
+                        width: 13px; height: 13px;
+                        color: $blanco-traslucido;
+                        margin-left: 5px;
+                    }
+                }
+                a:hover{
+                    color: white;
+                    ion-icon{
+                        transform: translateX(100%);
+                        color: white;
+                    }
+                }
+            }
+        }    
+        .duracion-clasificacion{
+            grid-area: a3;
+            justify-self: center;
+            @extend .extend-letra-contenido;
+            .it-encabezado{
+                display: flex;
+                align-items: center;
+                ion-icon{
+                    width: 15px;
+                    height: 15px;
+                    padding-right: 5px
+                }
+                p{
+                    @extend .extend-letra-encabezado;
+                }
+            }
+        }
+    }
+    .lateral{
+        max-width: 300px;
+        grid-area: a2;
+        justify-self: end;
+        backdrop-filter: blur(3px);
+        border-left: solid .5px $gris-traslucido;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: 'a1'
+                             'a2';
+        padding-top: 20vh;
+        padding-bottom: 30px;
+        .informacion-general{
+            grid-area: a1;
+            margin-left: 30px;
+            .it-encabezado{
+                @extend .extend-letra-encabezado;
+                margin-top: 20px;
+            }
+            .it-contenido{
+                @extend .extend-letra-contenido;
+            }
+        }
+    }
+}
