@@ -70,8 +70,8 @@ blurElement.forEach(element => {
 }) */
 window.addEventListener('scroll', () => {
     if(window.scrollY > 50) {
-        encabezado.style.backgroundColor = 'rgb(0,0,0)';
+        encabezado.style.backdropFilter = 'blur(10px)';
     } else {
-        encabezado.style.backgroundColor = 'transparent';
+        encabezado.style.backdropFilter = 'blur(0)';
     }
 })

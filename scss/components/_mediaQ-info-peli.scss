@@ -1,4 +1,37 @@
-
+//Tablets en vertical
+@media only screen and (max-width: 810px) and (max-height: 1080px){
+    .cuerpo-exposicion-cartelera{
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr .5fr;
+        grid-template-areas: 'a1'
+                             'a2';
+        .contenedor-cartelera-pelicula{
+            .contenedor-informacion{
+                .descripcion-pelicula{
+                    max-width: 70vw;
+                }
+            }
+        }
+        .lateral{
+            padding: 10vh 1rem;
+            border-left: 0;
+            border-top: solid .5px $gris-traslucido;
+            max-width: none;
+            width: 100%;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: 'a1 a2';
+            .trailer{
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
 //Celulares en vertical
 @media only screen and (max-width: 430px) and (max-height: 920px){
     .cuerpo-exposicion-cartelera{
@@ -23,11 +56,16 @@
             width: 100%;
             border-left: 0;
             border-top: solid .5px $gris-traslucido;
+            grid-template-columns: 1fr;
             grid-template-rows: 1fr 1fr;
+            grid-template-areas: 'a1'
+                                 'a2';
             .trailer{
+                grid-area: a2;
                 align-self: center;
+                height: 210px;
                 iframe{
-                    height: 300px;
+                    height: 100%;
                     width: 100%;
                     object-fit: cover;
                 }
@@ -38,39 +76,9 @@
 //Celulares en horizontal
 @media only screen and (max-width: 920px) and (max-height: 430px){
     .cuerpo-exposicion-cartelera{
-        grid-template-rows: 250vh;
-    }
-}
-//Tablets en vertical
-@media only screen and (max-width: 810px) and (max-height: 1080px){
-    .cuerpo-exposicion-cartelera{
-        height: 100vh;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr .5fr;
-        grid-template-areas: 'a1'
-                             'a2';
         .contenedor-cartelera-pelicula{
-            .contenedor-informacion{
-                .descripcion-pelicula{
-                    max-width: 70vw;
-                }
-            }
-        }
-        .lateral{
-            border-left: 0;
-            border-top: solid .5px $gris-traslucido;
-            max-width: none;
-            width: 100%;
-            grid-template-columns: 1fr 2fr;
-            grid-template-rows: 1fr;
-            grid-template-areas: 'a1 a2';
-            .trailer{
-                iframe{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
+            padding: 10% 5% 5% 15%;
         }
     }
 }
+
