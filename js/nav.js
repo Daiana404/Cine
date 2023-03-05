@@ -68,10 +68,10 @@ blurElement.forEach(element => {
         }
     })
 }) */
-window.addEventListener('scroll', () => {
+/* window.addEventListener('scroll', () => {
     if(window.scrollY > 50) {
         encabezado.style.backdropFilter = 'blur(10px)';
     } else {
         encabezado.style.backdropFilter = 'blur(0)';
     }
-})
+}) */
