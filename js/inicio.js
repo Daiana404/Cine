@@ -1,4 +1,25 @@
 const peliculasCartelera = [
+    /* {
+        titulo: 'El aro 4',
+        id: 'el-aro-4',
+        intertitulo: 'el despertar',
+        img: './scss/img/el-aro-4.jpg',
+        fondo: '../scss/img/el-aro-4-fondo.jpg',
+        descripcion: 'Ichijo es retado por un famoso médium conocido como Kenshin para que resuelva el misterio del “video de la maldición” que no te mata en 7 días, sino que ahora mata en 24 horas. Así, en su investigación el estudiante se unirá al autoproclamado adivino Oji Maeda para ahondar en la historia de la escalofriante Sadako.',
+        especificaciones: {
+            genero: 'terror',
+            duracion: '1.40',
+            clasificacion: '+13'
+        },
+        dato: {
+            premiere: '23 de febrero de 2023',
+            director: 'Hisashi Kimura',
+            musica: 'Kôji Endô',
+            reparto: ['Fuka Koshiba', 'Kazuma Kawamura', 'Mario Kuroba'],
+            repartoGoogle: 'https://www.google.com/search?q=el+aro+4&rlz=1C1CHZN_esAR993AR993&oq=el+aro+4&aqs=chrome.0.0i271j46i131i433i512j46i433i512j46i512l2j0i512j46i512j0i512l2j46i512.1085j0j7&sourceid=chrome&ie=UTF-8#wptab=si:AEcPFx5m7Nylg00wpE-iI3fN8-AfSDNfZqA7NKPDMKmG1MgjOhCtz3XVxKdMdK29gG4M7YUY_DEa6SC_J5rw8VAW37XIX7qrI1NgmJA5T6g7qKbqqAB1KPWPhkFDLpAuC5Rw8vnzun2Og4ppv7aoroiXPd6OScSKYw%3D%3D'
+        },
+        trailer: '<iframe src="https://www.youtube.com/embed/O9NmvWyJb4g" title="El Aro 4 | Tráiler oficial subtitulado | Estreno en cines mayo 2023" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+    }, */
     {
         titulo: 'El gato con botas',
         id: 'el-gato-con-botas',
@@ -40,7 +61,7 @@ const peliculasCartelera = [
             repartoGoogle: 'https://www.google.com/search?q=avatar+2+reparto&rlz=1C1CHZN_esAR993AR993&oq=avatar+2+re&aqs=chrome.1.69i57j0i20i263i433i512j0i512j0i433i512j0i512l3j69i60.9767j0j7&sourceid=chrome&ie=UTF-8'
         },
         trailer: '<iframe src="https://www.youtube.com/embed/bDFKIs4v0B4" title="Avatar: El Camino del Agua | Tráiler Oficial | Subtitulado" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
-   }
+    }
 ]
 const contenedorPeliculas = document.querySelector('.contenedor-peliculas');
 

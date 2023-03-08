@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap");
 html {
   scroll-behavior: smooth; }
@@ -16,7 +16,13 @@ html {
   color: white; }
 
 body {
-  background-color: #444444; }
+  background-color: #13100b;
+  position: relative; }
+
+h1, h2, h3, h4, h5, h6, a, p {
+  margin: 0;
+  padding: 0;
+  border: 0; }
 
 #encabezado {
   z-index: 5;
@@ -124,7 +130,7 @@ body {
           font-size: calc(2rem + .5vw);
           text-transform: capitalize;
           font-family: "Bakbak One";
-          -webkit-text-stroke: 0.5px rgba(221, 221, 221, 0.9);
+          -webkit-text-stroke: 0.5px #cecece;
           color: transparent;
           transition: 0.5s ease-in-out; }
         #inicio .contenedor-peliculas .box-pelicula .detalle .genero {
@@ -133,9 +139,9 @@ body {
           text-transform: uppercase;
           font-size: .8rem;
           letter-spacing: 1px;
-          color: rgba(221, 221, 221, 0.9); }
+          color: #cecece; }
         #inicio .contenedor-peliculas .box-pelicula .detalle .intertitulo {
-          color: rgba(221, 221, 221, 0.9);
+          color: #cecece;
           transition: 0.5s ease-in-out;
           font-size: calc(.5rem + .5vw);
           text-transform: capitalize;
@@ -143,7 +149,7 @@ body {
           bottom: 10px;
           left: 5px; }
         #inicio .contenedor-peliculas .box-pelicula .detalle .duracion {
-          color: rgba(221, 221, 221, 0.9);
+          color: #cecece;
           display: inline;
           position: absolute;
           top: 50%;
@@ -151,7 +157,7 @@ body {
           right: 0;
           font-size: calc(.9rem + .5vw); }
           #inicio .contenedor-peliculas .box-pelicula .detalle .duracion span {
-            color: rgba(221, 221, 221, 0.9);
+            color: #cecece;
             font-size: .85rem; }
     #inicio .contenedor-peliculas .box-pelicula.selected {
       opacity: 1;
@@ -191,10 +197,237 @@ body {
         width: 22px;
         height: 22px; }
 
+/* #funciones{
+    background-color: $negro-ahumado;
+    height: 100vh;
+    padding: 100px;
+    padding-top: 50px;
+    position: relative;
+    h1{
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+        transform-origin: 0 0;
+        transform: translate(10%, 750%) rotate(-90deg);
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: $gris-traslucido;
+    }
+    .fechas{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        .fecha{
+            width: 100%;
+            border-bottom: solid 1px $blanco-traslucido;
+            padding-top: 10px;
+            padding-left: 20px;
+            height: 100px;
+            position: relative;
+            .dia{
+                color: $blanco-traslucido;
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 5rem;
+                font-weight: 700;
+            }
+            .mes{
+                color: $blanco-traslucido;
+                text-transform: capitalize;
+                font-weight: 700;
+                font-size: 1rem;
+            }
+            .detalle{
+                color: $blanco-traslucido;
+                font-size: .9rem;
+                font-weight: 300;
+                span{
+                    @extend .detalle;
+                }
+            }
+        }
+    }
+
+} */
+#contacto {
+  padding: 50px 10px;
+  height: 100%;
+  width: 100%;
+  background-color: #13100b;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'a1 a2';
+  justify-items: center;
+  align-items: start; }
+  #contacto h1 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-transform: capitalize; }
+  #contacto .mensaje, #contacto .social-media {
+    max-width: 350px;
+    width: 100%; }
+    #contacto .mensaje .form, #contacto .social-media .form {
+      grid-area: a1;
+      height: fit-content;
+      border-radius: 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #contacto .mensaje .form .inputBox, #contacto .social-media .form .inputBox {
+        width: 100%;
+        margin: 18px 0;
+        position: relative; }
+        #contacto .mensaje .form .inputBox input, #contacto .social-media .form .inputBox input {
+          font-weight: 500;
+          position: relative;
+          padding: 20px 10px 10px;
+          background-color: transparent;
+          color: #13100b;
+          z-index: 2;
+          font-size: .85rem;
+          outline: none; }
+        #contacto .mensaje .form .inputBox span, #contacto .social-media .form .inputBox span {
+          position: absolute;
+          left: 0;
+          color: #cecece;
+          font-size: .85rem;
+          transition: .5s;
+          pointer-events: none;
+          padding: 20px 10px 10px;
+          z-index: 3;
+          letter-spacing: .04rem; }
+        #contacto .mensaje .form .inputBox input:valid ~ span, #contacto .social-media .form .inputBox input:valid ~ span,
+        #contacto .mensaje .form .inputBox input:focus ~ span,
+        #contacto .social-media .form .inputBox input:focus ~ span {
+          color: white;
+          transform: translateY(-28px);
+          font-size: .7rem; }
+        #contacto .mensaje .form .inputBox i, #contacto .social-media .form .inputBox i {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: #cecece;
+          height: 1px;
+          width: 100%;
+          overflow: hidden;
+          pointer-events: none;
+          transition: .5s;
+          border-radius: 5px; }
+        #contacto .mensaje .form .inputBox input:valid ~ i, #contacto .social-media .form .inputBox input:valid ~ i,
+        #contacto .mensaje .form .inputBox input:focus ~ i,
+        #contacto .social-media .form .inputBox input:focus ~ i {
+          height: 40px; }
+      #contacto .mensaje .form #text-area, #contacto .social-media .form #text-area {
+        margin: 10px 0;
+        width: 100%;
+        height: 100px;
+        resize: none;
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+        font-size: .85rem;
+        font-weight: 500;
+        color: #13100b;
+        background-color: #cecece; }
+      #contacto .mensaje .form .btn-submit, #contacto .social-media .form .btn-submit {
+        z-index: 10;
+        width: 100%; }
+        #contacto .mensaje .form .btn-submit .submit, #contacto .social-media .form .btn-submit .submit {
+          position: relative;
+          width: 100%;
+          padding: 10px 10px;
+          background-color: transparent;
+          border: solid 2px crimson;
+          color: crimson;
+          font-weight: 500;
+          text-transform: uppercase;
+          font-size: .8rem;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: color .4s linear; }
+        #contacto .mensaje .form .btn-submit .submit:hover, #contacto .social-media .form .btn-submit .submit:hover {
+          color: white; }
+        #contacto .mensaje .form .btn-submit .submit::before, #contacto .social-media .form .btn-submit .submit::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background: crimson;
+          z-index: -1;
+          transition: transform .5s;
+          transform-origin: 0 0;
+          transform: scaleX(0); }
+        #contacto .mensaje .form .btn-submit .submit:hover::before, #contacto .social-media .form .btn-submit .submit:hover::before {
+          transform: scaleX(1); }
+  #contacto .social-media {
+    grid-area: a2;
+    display: flex;
+    flex-direction: column; }
+    #contacto .social-media .wrapper div h2 {
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: .7rem;
+      margin-top: 20px;
+      color: #616161;
+      letter-spacing: 1px; }
+    #contacto .social-media .wrapper .direccion a p {
+      text-transform: capitalize; }
+    #contacto .social-media .wrapper .redes ul li {
+      display: flex;
+      align-items: center; }
+      #contacto .social-media .wrapper .redes ul li ion-icon {
+        margin-right: 10px; }
+    #contacto .social-media .wrapper .llamada div {
+      display: flex;
+      align-items: center; }
+      #contacto .social-media .wrapper .llamada div ion-icon {
+        margin-right: 10px; }
+
+#footer {
+  width: 100%;
+  height: fit-content;
+  padding: 15px; }
+  #footer .enlace-rapido {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px; }
+    #footer .enlace-rapido a {
+      color: #cecece;
+      font-size: .8rem;
+      margin: 0 20px; }
+  #footer .copyright {
+    width: 100%;
+    border-top: solid 0.5px rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px; }
+    #footer .copyright p, #footer .copyright p a {
+      color: #cecece;
+      font-size: .7rem; }
+
+.footer-cartelera {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
 .cuerpo-exposicion-cartelera {
-  /* min-width: 100vw;
-    min-height: 100vh; */
+  padding-bottom: 48px;
   position: relative;
+  height: fit-content;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 100vh;
@@ -246,7 +479,7 @@ body {
         margin-top: 15px;
         position: relative; }
         .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas a {
-          color: rgba(221, 221, 221, 0.9);
+          color: #cecece;
           font-size: 12px;
           text-transform: capitalize;
           display: flex;
@@ -257,7 +490,7 @@ body {
             transition: .5s;
             width: 13px;
             height: 13px;
-            color: rgba(221, 221, 221, 0.9);
+            color: #cecece;
             margin-left: 5px; }
         .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .reparto .it-ver-mas a:hover {
           color: white; }
@@ -308,16 +541,32 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 20px !important; } }
+        font-size: 20px !important; }
+  #contacto {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'a1' 'a2';
+    align-items: center; }
+    #contacto .social-media {
+      position: relative; }
+      #contacto .social-media .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr; }
+    #contacto p {
+      font-size: .8rem; } }
 
 @media only screen and (max-width: 550px) {
   #inicio .contenedor-peliculas .box-pelicula {
     margin-right: 0;
-    margin-left: 0; } }
+    margin-left: 0; }
+  #footer .enlace-rapido {
+    flex-direction: column; }
+    #footer .enlace-rapido a {
+      padding: 5px 0; } }
 
-@media only screen and (max-width: 810px) and (max-height: 1080px) {
+@media only screen and (max-width: 820px) and (max-height: 1180px) {
   .cuerpo-exposicion-cartelera {
-    height: 100vh;
+    min-height: 100vh;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr .5fr;
     grid-template-areas: 'a1' 'a2'; }
@@ -344,10 +593,10 @@ body {
     grid-template-areas: 'a1' 'a2'; }
     .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula {
       grid-template-rows: 2fr .5fr;
-      padding: 10vh 5vw;
-      padding-top: 20vh;
-      padding-left: 8vw;
-      height: 90vh; }
+      padding: 10% 5%;
+      padding-top: 20%;
+      padding-left: 8%;
+      /* height: 90vh; */ }
       .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula .contenedor-informacion .descripcion-pelicula {
         max-width: 80vw; }
     .cuerpo-exposicion-cartelera .lateral {
@@ -367,6 +616,8 @@ body {
           width: 100%;
           object-fit: cover; } }
 
-@media only screen and (max-width: 810px) and (max-height: 430px) {
-  .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula {
-    padding: 10% 5% 5% 15%; } }
+@media only screen and (max-width: 920px) and (max-height: 430px) {
+  .cuerpo-exposicion-cartelera {
+    grid-template-rows: 150vh; }
+    .cuerpo-exposicion-cartelera .contenedor-cartelera-pelicula {
+      padding: 10% 5% 5% 15%; } }

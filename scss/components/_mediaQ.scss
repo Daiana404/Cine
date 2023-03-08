@@ -22,6 +22,23 @@
             }
         }
     }
+    #contacto{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'a1'
+                             'a2';
+        align-items: center;
+        .social-media{
+            position: relative;
+            .wrapper{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        p{
+            font-size: .8rem;
+        }
+    }
 }
 @media only screen and (max-width: 550px) {
     #inicio{
@@ -29,6 +46,14 @@
             .box-pelicula{
                 margin-right: 0;
                 margin-left: 0;
+            }
+        }
+    }
+    #footer{
+        .enlace-rapido{
+            flex-direction: column;
+            a{
+                padding: 5px 0;
             }
         }
     }
